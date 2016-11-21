@@ -16,6 +16,7 @@
 		2E426E741DE36DB80091B35F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E426E721DE36DB80091B35F /* LaunchScreen.storyboard */; };
 		2E426E7F1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E7E1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m */; };
 		2E426E8A1DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */; };
+		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2E426E851DE36DB80091B35F /* Trick or Treat CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trick or Treat CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trick_or_Treat_CounterUITests.m; sourceTree = "<group>"; };
 		2E426E8B1DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E426E9D1DE36FB60091B35F /* CounterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterButton.h; sourceTree = "<group>"; };
+		2E426E9E1DE36FB60091B35F /* CounterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +106,12 @@
 		2E426E601DE36DB80091B35F /* Trick or Treat Counter */ = {
 			isa = PBXGroup;
 			children = (
-				2E426E641DE36DB80091B35F /* AppDelegate.h */,
-				2E426E651DE36DB80091B35F /* AppDelegate.m */,
-				2E426E671DE36DB80091B35F /* ViewController.h */,
-				2E426E681DE36DB80091B35F /* ViewController.m */,
+				2E426E991DE36DF10091B35F /* Model */,
+				2E426E981DE36DEC0091B35F /* View */,
+				2E426E971DE36DE30091B35F /* Controller */,
 				2E426E6A1DE36DB80091B35F /* Main.storyboard */,
-				2E426E701DE36DB80091B35F /* Assets.xcassets */,
 				2E426E721DE36DB80091B35F /* LaunchScreen.storyboard */,
+				2E426E701DE36DB80091B35F /* Assets.xcassets */,
 				2E426E751DE36DB80091B35F /* Info.plist */,
 				2E426E6D1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld */,
 				2E426E611DE36DB80091B35F /* Supporting Files */,
@@ -141,6 +143,33 @@
 				2E426E8B1DE36DB80091B35F /* Info.plist */,
 			);
 			path = "Trick or Treat CounterUITests";
+			sourceTree = "<group>";
+		};
+		2E426E971DE36DE30091B35F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E426E671DE36DB80091B35F /* ViewController.h */,
+				2E426E681DE36DB80091B35F /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2E426E981DE36DEC0091B35F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E426E9D1DE36FB60091B35F /* CounterButton.h */,
+				2E426E9E1DE36FB60091B35F /* CounterButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E426E991DE36DF10091B35F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E426E641DE36DB80091B35F /* AppDelegate.h */,
+				2E426E651DE36DB80091B35F /* AppDelegate.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +310,7 @@
 			files = (
 				2E426E691DE36DB80091B35F /* ViewController.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
+				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,
 				2E426E6F1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld in Sources */,
 				2E426E631DE36DB80091B35F /* main.m in Sources */,
 			);
