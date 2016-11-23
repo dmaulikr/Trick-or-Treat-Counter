@@ -3,20 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E426E631DE36DB80091B35F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E621DE36DB80091B35F /* main.m */; };
 		2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E651DE36DB80091B35F /* AppDelegate.m */; };
-		2E426E691DE36DB80091B35F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E681DE36DB80091B35F /* ViewController.m */; };
+		2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E681DE36DB80091B35F /* CounterViewController.m */; };
 		2E426E6C1DE36DB80091B35F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E426E6A1DE36DB80091B35F /* Main.storyboard */; };
-		2E426E6F1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E6D1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld */; };
 		2E426E711DE36DB80091B35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E426E701DE36DB80091B35F /* Assets.xcassets */; };
 		2E426E741DE36DB80091B35F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E426E721DE36DB80091B35F /* LaunchScreen.storyboard */; };
 		2E426E7F1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E7E1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m */; };
 		2E426E8A1DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */; };
 		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
+		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
+		2E900B6C1DE63D87003F15DA /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */; };
+		2E900B6D1DE63D87003F15DA /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */; };
+		2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,15 +39,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E498F031DE5000B00FB3D38 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2E426E5E1DE36DB80091B35F /* Trick or Treat Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trick or Treat Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E426E621DE36DB80091B35F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E426E641DE36DB80091B35F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E426E651DE36DB80091B35F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E426E671DE36DB80091B35F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E426E681DE36DB80091B35F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E426E671DE36DB80091B35F /* CounterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
+		2E426E681DE36DB80091B35F /* CounterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
 		2E426E6B1DE36DB80091B35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2E426E6E1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trick_or_Treat_Counter.xcdatamodel; sourceTree = "<group>"; };
 		2E426E701DE36DB80091B35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E426E731DE36DB80091B35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E426E751DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,16 +71,16 @@
 		2E426E8B1DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E426E9D1DE36FB60091B35F /* CounterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterButton.h; sourceTree = "<group>"; };
 		2E426E9E1DE36FB60091B35F /* CounterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterButton.m; sourceTree = "<group>"; };
+		2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		2E900B681DE63D87003F15DA /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataClass.h"; path = "../Year+CoreDataClass.h"; sourceTree = "<group>"; };
+		2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataClass.m"; path = "../Year+CoreDataClass.m"; sourceTree = "<group>"; };
+		2E900B6A1DE63D87003F15DA /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataProperties.h"; path = "../Year+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataProperties.m"; path = "../Year+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearsTableViewController.h; sourceTree = "<group>"; };
+		2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E426E5B1DE36DB80091B35F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E426E771DE36DB80091B35F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,9 +95,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E498F021DE5000B00FB3D38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4110ED1DE4F701004E2EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E426E551DE36DB80091B35F = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +119,7 @@
 				2E426E7D1DE36DB80091B35F /* Trick or Treat CounterTests */,
 				2E426E881DE36DB80091B35F /* Trick or Treat CounterUITests */,
 				2E426E5F1DE36DB80091B35F /* Products */,
+				2E4110ED1DE4F701004E2EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +136,8 @@
 		2E426E601DE36DB80091B35F /* Trick or Treat Counter */ = {
 			isa = PBXGroup;
 			children = (
+				2E426E641DE36DB80091B35F /* AppDelegate.h */,
+				2E426E651DE36DB80091B35F /* AppDelegate.m */,
 				2E426E991DE36DF10091B35F /* Model */,
 				2E426E981DE36DEC0091B35F /* View */,
 				2E426E971DE36DE30091B35F /* Controller */,
@@ -113,7 +145,6 @@
 				2E426E721DE36DB80091B35F /* LaunchScreen.storyboard */,
 				2E426E701DE36DB80091B35F /* Assets.xcassets */,
 				2E426E751DE36DB80091B35F /* Info.plist */,
-				2E426E6D1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld */,
 				2E426E611DE36DB80091B35F /* Supporting Files */,
 			);
 			path = "Trick or Treat Counter";
@@ -148,8 +179,10 @@
 		2E426E971DE36DE30091B35F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2E426E671DE36DB80091B35F /* ViewController.h */,
-				2E426E681DE36DB80091B35F /* ViewController.m */,
+				2E426E671DE36DB80091B35F /* CounterViewController.h */,
+				2E426E681DE36DB80091B35F /* CounterViewController.m */,
+				2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */,
+				2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,10 +199,21 @@
 		2E426E991DE36DF10091B35F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E426E641DE36DB80091B35F /* AppDelegate.h */,
-				2E426E651DE36DB80091B35F /* AppDelegate.m */,
+				2E900B6E1DE63DA4003F15DA /* CoreDataFiles */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2E900B6E1DE63DA4003F15DA /* CoreDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */,
+				2E900B681DE63D87003F15DA /* Year+CoreDataClass.h */,
+				2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */,
+				2E900B6A1DE63D87003F15DA /* Year+CoreDataProperties.h */,
+				2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */,
+			);
+			name = CoreDataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +224,9 @@
 			buildConfigurationList = 2E426E8E1DE36DB80091B35F /* Build configuration list for PBXNativeTarget "Trick or Treat Counter" */;
 			buildPhases = (
 				2E426E5A1DE36DB80091B35F /* Sources */,
-				2E426E5B1DE36DB80091B35F /* Frameworks */,
 				2E426E5C1DE36DB80091B35F /* Resources */,
+				2E498F021DE5000B00FB3D38 /* Frameworks */,
+				2E498F031DE5000B00FB3D38 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +285,7 @@
 					2E426E5D1DE36DB80091B35F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = K55775FR34;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					2E426E791DE36DB80091B35F = {
@@ -257,7 +303,7 @@
 				};
 			};
 			buildConfigurationList = 2E426E591DE36DB80091B35F /* Build configuration list for PBXProject "Trick or Treat Counter" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -308,10 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E426E691DE36DB80091B35F /* ViewController.m in Sources */,
+				2E900B6D1DE63D87003F15DA /* Year+CoreDataProperties.m in Sources */,
+				2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */,
+				2E900B6C1DE63D87003F15DA /* Year+CoreDataClass.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
+				2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */,
+				2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */,
 				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,
-				2E426E6F1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld in Sources */,
 				2E426E631DE36DB80091B35F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,11 +510,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K55775FR34;
 				INFOPLIST_FILE = "Trick or Treat Counter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.christopherweaver..Trick-or-Treat-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trick or Treat Counter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -473,11 +527,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K55775FR34;
 				INFOPLIST_FILE = "Trick or Treat Counter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.christopherweaver..Trick-or-Treat-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trick or Treat Counter-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -550,6 +608,7 @@
 				2E426E901DE36DB80091B35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E426E911DE36DB80091B35F /* Build configuration list for PBXNativeTarget "Trick or Treat CounterTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +617,7 @@
 				2E426E931DE36DB80091B35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E426E941DE36DB80091B35F /* Build configuration list for PBXNativeTarget "Trick or Treat CounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,17 +626,18 @@
 				2E426E961DE36DB80091B35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2E426E6D1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodeld */ = {
+		2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2E426E6E1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodel */,
+				2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 2E426E6E1DE36DB80091B35F /* Trick_or_Treat_Counter.xcdatamodel */;
-			path = Trick_or_Treat_Counter.xcdatamodeld;
+			currentVersion = 2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -6,17 +6,27 @@
 //  Copyright © 2016 Christopher Weaver. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CounterViewController.h"
 #import "CounterButton.h"
+#import "AppDelegate.h"
 
-@interface ViewController ()
+
+@interface CounterViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
 @property (nonatomic) int counter;
 
+@property (nonatomic) AppDelegate *appDelegate;
+
+//@property (nonatomic) NSFetchedResultsController *fetchedResultsController;
+//@property (nonatomic) NSFetchRequest *fetchRequest;
+
 @end
 
-@implementation ViewController
+@implementation CounterViewController
+
+
+
 
 
 - (IBAction)addButtonPushed:(CounterButton *)sender {
@@ -45,7 +55,17 @@
         [ghostImageView setFrame:CGRectMake(self.view.frame.size.width + 35, self.counterLabel.frame.origin.y - 10, 50, 50)];
     
         
-    }completion:nil];
+    }completion:^(BOOL finished) {
+        
+        [ghostImageView removeFromSuperview];
+        
+    }];
+    
+ //   _fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Year"];
+   // _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest managedObjectContext: self.app.persistentContainer.viewContext sectionNameKeyPath:nil cacheName:nil];
+    
+
+  
 }
 
 - (IBAction)subtractButtonPushed:(CounterButton *)sender {
@@ -62,13 +82,21 @@
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.counterLabel.text = @"0";
     
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+   
+    
 }
 
 
+
+// NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] init];
+// NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
 
 
 @end
