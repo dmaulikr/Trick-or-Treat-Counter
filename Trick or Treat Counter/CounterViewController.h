@@ -10,7 +10,7 @@
 //#import <CoreData/CoreData.h>
 
 
-@interface CounterViewController : UIViewController
+@interface CounterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 
 @end

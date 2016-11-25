@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jack-o-lantern" translatesAutoresizingMaskIntoConstraints="NO" id="4Ox-S8-lAR">
-                                <rect key="frame" x="118" y="97" width="139" height="128"/>
+                                <rect key="frame" x="125" y="156" width="139" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-rj-Wn5">
@@ -33,7 +33,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-t2-92Y" userLabel="Counter Label">
-                                <rect key="frame" x="79" y="280" width="216" height="38"/>
+                                <rect key="frame" x="86" y="307" width="216" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhV-nH-2hP" userLabel="Add Button" customClass="CounterButton">
-                                <rect key="frame" x="144" y="342" width="100" height="100"/>
+                                <rect key="frame" x="144" y="378" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -56,7 +56,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ll-7Y-X1l" userLabel="Subtract Button" customClass="CounterButton">
-                                <rect key="frame" x="144" y="465" width="100" height="100"/>
+                                <rect key="frame" x="157" y="503" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -70,12 +70,21 @@
                                     <action selector="subtractButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTf-EY-dnh"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnI-25-W8B" userLabel="Year Button">
+                                <rect key="frame" x="127" y="86" width="135" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.66172422149999999" blue="0.38194799419999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="yearButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQf-N0-1sG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="5ne-TW-NiA"/>
                     <connections>
                         <outlet property="counterLabel" destination="6JX-t2-92Y" id="YZ7-Pk-3sp"/>
+                        <outlet property="yearButton" destination="WnI-25-W8B" id="tfy-i2-GR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
