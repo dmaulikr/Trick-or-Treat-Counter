@@ -16,9 +16,9 @@
 		2E426E7F1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E7E1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m */; };
 		2E426E8A1DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */; };
 		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
+		2E8133881DEE18B80015E0F7 /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8133851DEE18B80015E0F7 /* Year+CoreDataClass.m */; };
+		2E8133891DEE18B80015E0F7 /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8133871DEE18B80015E0F7 /* Year+CoreDataProperties.m */; };
 		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
-		2E900B6C1DE63D87003F15DA /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */; };
-		2E900B6D1DE63D87003F15DA /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */; };
 		2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +71,12 @@
 		2E426E8B1DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E426E9D1DE36FB60091B35F /* CounterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterButton.h; sourceTree = "<group>"; };
 		2E426E9E1DE36FB60091B35F /* CounterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterButton.m; sourceTree = "<group>"; };
+		2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		2E8133841DEE18B80015E0F7 /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Year+CoreDataClass.h"; sourceTree = "<group>"; };
+		2E8133851DEE18B80015E0F7 /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Year+CoreDataClass.m"; sourceTree = "<group>"; };
+		2E8133861DEE18B80015E0F7 /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Year+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2E8133871DEE18B80015E0F7 /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Year+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		2E900B681DE63D87003F15DA /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataClass.h"; path = "../Year+CoreDataClass.h"; sourceTree = "<group>"; };
-		2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataClass.m"; path = "../Year+CoreDataClass.m"; sourceTree = "<group>"; };
-		2E900B6A1DE63D87003F15DA /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataProperties.h"; path = "../Year+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataProperties.m"; path = "../Year+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearsTableViewController.h; sourceTree = "<group>"; };
 		2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +116,10 @@
 		2E426E551DE36DB80091B35F = {
 			isa = PBXGroup;
 			children = (
+				2E8133841DEE18B80015E0F7 /* Year+CoreDataClass.h */,
+				2E8133851DEE18B80015E0F7 /* Year+CoreDataClass.m */,
+				2E8133861DEE18B80015E0F7 /* Year+CoreDataProperties.h */,
+				2E8133871DEE18B80015E0F7 /* Year+CoreDataProperties.m */,
 				2E426E601DE36DB80091B35F /* Trick or Treat Counter */,
 				2E426E7D1DE36DB80091B35F /* Trick or Treat CounterTests */,
 				2E426E881DE36DB80091B35F /* Trick or Treat CounterUITests */,
@@ -208,10 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */,
-				2E900B681DE63D87003F15DA /* Year+CoreDataClass.h */,
-				2E900B691DE63D87003F15DA /* Year+CoreDataClass.m */,
-				2E900B6A1DE63D87003F15DA /* Year+CoreDataProperties.h */,
-				2E900B6B1DE63D87003F15DA /* Year+CoreDataProperties.m */,
 			);
 			name = CoreDataFiles;
 			sourceTree = "<group>";
@@ -354,9 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E900B6D1DE63D87003F15DA /* Year+CoreDataProperties.m in Sources */,
+				2E8133891DEE18B80015E0F7 /* Year+CoreDataProperties.m in Sources */,
 				2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */,
-				2E900B6C1DE63D87003F15DA /* Year+CoreDataClass.m in Sources */,
+				2E8133881DEE18B80015E0F7 /* Year+CoreDataClass.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
 				2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */,
 				2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */,
@@ -634,9 +635,10 @@
 		2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */,
 				2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */;
+			currentVersion = 2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */;
 			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

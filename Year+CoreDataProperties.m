@@ -2,7 +2,7 @@
 //  Year+CoreDataProperties.m
 //  Trick or Treat Counter
 //
-//  Created by Christopher Weaver on 11/23/16.
+//  Created by Christopher Weaver on 11/29/16.
 //  Copyright © 2016 Christopher Weaver. All rights reserved.
 //
 
@@ -14,10 +14,10 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Year"];
 }
 
-@dynamic year;
-@dynamic visitors;
 @dynamic address;
 @dynamic candy;
 @dynamic money;
+@dynamic visitors;
+@dynamic year;
 
 @end
