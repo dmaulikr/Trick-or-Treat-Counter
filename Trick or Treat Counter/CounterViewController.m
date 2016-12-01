@@ -65,6 +65,8 @@
         
         [_appDelegate saveContext];
         
+        [_loggedYears addObject:newYear];
+        
     }
     
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
@@ -155,11 +157,22 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:true];
+    
+    CAGradientLayer *theViewGradient = [CAGradientLayer layer];
+    theViewGradient.colors = [NSArray arrayWithObjects: [UIColor orangeColor].CGColor, [UIColor whiteColor].CGColor, [UIColor orangeColor].CGColor, [UIColor whiteColor].CGColor, [UIColor orangeColor].CGColor, [UIColor whiteColor].CGColor, nil];
+    theViewGradient.frame = self.view.bounds;
+    
+    [self.view.layer insertSublayer:theViewGradient atIndex:0];
+
+}
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     _managedObjectContext = _appDelegate.persistentContainer.viewContext;
@@ -185,6 +198,7 @@
         
         [[NSUserDefaults standardUserDefaults] setObject:newYear forKey:@"manipulatedYear"];
         
+        [_loggedYears addObject:newYear];
         
     }
         
