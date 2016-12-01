@@ -16,6 +16,8 @@
 		2E426E7F1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E7E1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m */; };
 		2E426E8A1DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */; };
 		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
+		2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36601DF0D972004DB1E7 /* LoginVC.m */; };
+		2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */; };
 		2E8133881DEE18B80015E0F7 /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8133851DEE18B80015E0F7 /* Year+CoreDataClass.m */; };
 		2E8133891DEE18B80015E0F7 /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8133871DEE18B80015E0F7 /* Year+CoreDataProperties.m */; };
 		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
@@ -71,6 +73,10 @@
 		2E426E8B1DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E426E9D1DE36FB60091B35F /* CounterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterButton.h; sourceTree = "<group>"; };
 		2E426E9E1DE36FB60091B35F /* CounterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterButton.m; sourceTree = "<group>"; };
+		2E7D365F1DF0D972004DB1E7 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		2E7D36601DF0D972004DB1E7 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		2E7D36621DF0DD7A004DB1E7 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		2E8133841DEE18B80015E0F7 /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Year+CoreDataClass.h"; sourceTree = "<group>"; };
 		2E8133851DEE18B80015E0F7 /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Year+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 				2E426E681DE36DB80091B35F /* CounterViewController.m */,
 				2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */,
 				2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */,
+				2E7D365F1DF0D972004DB1E7 /* LoginVC.h */,
+				2E7D36601DF0D972004DB1E7 /* LoginVC.m */,
+				2E7D36621DF0DD7A004DB1E7 /* CreateAccountViewController.h */,
+				2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,6 +367,8 @@
 			files = (
 				2E8133891DEE18B80015E0F7 /* Year+CoreDataProperties.m in Sources */,
 				2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */,
+				2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */,
+				2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */,
 				2E8133881DEE18B80015E0F7 /* Year+CoreDataClass.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
 				2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */,
