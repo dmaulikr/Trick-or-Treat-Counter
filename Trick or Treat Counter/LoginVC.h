@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Cloudkit/Cloudkit.h>
+#import "CounterViewController.h"
 
-@interface LoginVC : UIViewController
+@interface LoginVC : UIViewController <UITextFieldDelegate>
 
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1124361DF1EEAC00FC5DDC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1124351DF1EEAC00FC5DDC /* CloudKit.framework */; };
 		2E426E631DE36DB80091B35F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E621DE36DB80091B35F /* main.m */; };
 		2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E651DE36DB80091B35F /* AppDelegate.m */; };
 		2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E681DE36DB80091B35F /* CounterViewController.m */; };
@@ -55,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E1124341DF1EEA900FC5DDC /* Trick or Treat Counter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Trick or Treat Counter.entitlements"; sourceTree = "<group>"; };
+		2E1124351DF1EEAC00FC5DDC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2E426E5E1DE36DB80091B35F /* Trick or Treat Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trick or Treat Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E426E621DE36DB80091B35F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E426E641DE36DB80091B35F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1124361DF1EEAC00FC5DDC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,7 @@
 		2E4110ED1DE4F701004E2EDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1124351DF1EEAC00FC5DDC /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 		2E426E601DE36DB80091B35F /* Trick or Treat Counter */ = {
 			isa = PBXGroup;
 			children = (
+				2E1124341DF1EEA900FC5DDC /* Trick or Treat Counter.entitlements */,
 				2E426E641DE36DB80091B35F /* AppDelegate.h */,
 				2E426E651DE36DB80091B35F /* AppDelegate.m */,
 				2E426E991DE36DF10091B35F /* Model */,
@@ -298,6 +304,14 @@
 						DevelopmentTeam = K55775FR34;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					2E426E791DE36DB80091B35F = {
 						CreatedOnToolsVersion = 8.1;
@@ -524,6 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat Counter/Trick or Treat Counter.entitlements";
 				DEVELOPMENT_TEAM = K55775FR34;
 				INFOPLIST_FILE = "Trick or Treat Counter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -541,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat Counter/Trick or Treat Counter.entitlements";
 				DEVELOPMENT_TEAM = K55775FR34;
 				INFOPLIST_FILE = "Trick or Treat Counter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;

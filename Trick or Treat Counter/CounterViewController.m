@@ -27,12 +27,9 @@
 @property (nonatomic) NSMutableArray *loggedYears;
 @property (nonatomic) Year *manipulatedYear;
 
-
 @end
 
 @implementation CounterViewController
-
-
 
 - (IBAction)yearButtonPushed:(id)sender {
     
@@ -142,7 +139,6 @@
     
 }
 
-
 - (IBAction)subtractButtonPushed:(CounterButton *)sender {
     
     sender.currentAngle = 1;
@@ -172,8 +168,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    
 
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [self matchingRecordsToICloud];
     
     _managedObjectContext = _appDelegate.persistentContainer.viewContext;
     
@@ -212,7 +212,6 @@
             break;
         }
     }
-    
     
     [_yearButton setTitle:[[NSUserDefaults standardUserDefaults]
                            stringForKey:@"manipulatedYear"] forState:UIControlStateNormal];
@@ -259,6 +258,32 @@
     return label;
 }
 
+-(void)matchingRecordsToICloud {
+    
+    CKDatabase *publicDB = [[CKContainer defaultContainer] publicCloudDatabase];
+    
+    CKRecord *newRecord = _appDelegate.theRecord;
+    
+    
+    
+    
+    [publicDB fetchRecordWithID:_appDelegate.theRecord.recordID completionHandler:^(CKRecord *fetchedPlace, NSError *error) {
+        
+        
+        if (fetchedPlace != nil) {
+            NSString *name = fetchedPlace[@"name"];
+            fetchedPlace[@"name"] = [name stringByAppendingString:@" Door A"];
+            
+            [publicDB saveRecord:fetchedPlace completionHandler:^(CKRecord *savedPlace, NSError *savedError) {
+                //...
+            }];
+        } else {
+            // handle errors here
+        }
+    }];
+    
+    
+}
 
 
 @end

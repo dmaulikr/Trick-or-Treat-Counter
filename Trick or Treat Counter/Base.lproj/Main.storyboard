@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--CounterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CounterViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CounterVC" storyboardIdentifier="CounterVC" title="CounterVC" id="BYZ-38-t0r" customClass="CounterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -119,7 +119,7 @@
         <!--Login VC-->
         <scene sceneID="Lah-gB-wcK">
             <objects>
-                <viewController title="Login VC" id="NXB-Eh-6zy" customClass="LoginVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="Login VC" id="NXB-Eh-6zy" customClass="LoginVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tv0-MU-zB5"/>
                         <viewControllerLayoutGuide type="bottom" id="3a6-tI-iwQ"/>
@@ -174,6 +174,7 @@
                                 <state key="normal" title="Create Account"/>
                                 <connections>
                                     <action selector="createAccountButtonPushed:" destination="NXB-Eh-6zy" eventType="touchUpInside" id="3aG-nN-Oa8"/>
+                                    <segue destination="i9z-4B-gbf" kind="presentation" id="PrH-X0-J4h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,7 +192,7 @@
         <!--Create Account View Controller-->
         <scene sceneID="yeu-wH-LAm">
             <objects>
-                <viewController id="i9z-4B-gbf" customClass="CreateAccountViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccountVC" id="i9z-4B-gbf" customClass="CreateAccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ji8-GX-bbw"/>
                         <viewControllerLayoutGuide type="bottom" id="WN5-yX-bKQ"/>
@@ -346,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="-674.39999999999998" y="787.55622188905556"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabBarVC-->
         <scene sceneID="Fm3-R5-3SZ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="C3w-4S-dtd" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" title="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="C3w-4S-dtd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Pxf-zc-Pcg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -357,7 +358,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CrZ-XH-Vas"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vL6-dV-a4V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4Z-Sh-3yU" userLabel="First Responder" sceneMemberID="firstResponder"/>
