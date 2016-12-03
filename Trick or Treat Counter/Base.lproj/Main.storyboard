@@ -177,11 +177,27 @@
                                     <segue destination="i9z-4B-gbf" kind="presentation" id="PrH-X0-J4h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keep Me Logged in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE0-ko-EWP">
+                                <rect key="frame" x="116" y="532" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp9-rJ-b8s">
+                                <rect key="frame" x="67" y="530" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.66172422149999999" blue="0.38194799419999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stayLoggedInButtonPushed:" destination="NXB-Eh-6zy" eventType="touchUpInside" id="UFE-YC-wjf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="gPq-xD-N7S" id="Cb9-k2-5vU"/>
+                        <outlet property="stayLoggedInButton" destination="Hp9-rJ-b8s" id="KCv-Bb-87X"/>
                         <outlet property="usernameTextField" destination="dQk-sI-SOe" id="fEm-sW-6do"/>
                     </connections>
                 </viewController>

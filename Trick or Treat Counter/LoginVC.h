@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Cloudkit/Cloudkit.h>
 #import "CounterViewController.h"
+#import "User+CoreDataClass.h"
+#import "User+CoreDataProperties.h"
 
 @interface LoginVC : UIViewController <UITextFieldDelegate>
 

@@ -2,7 +2,7 @@
 //  Year+CoreDataProperties.m
 //  Trick or Treat Counter
 //
-//  Created by Christopher Weaver on 11/29/16.
+//  Created by Christopher Weaver on 12/3/16.
 //  Copyright © 2016 Christopher Weaver. All rights reserved.
 //
 
@@ -19,5 +19,6 @@
 @dynamic money;
 @dynamic visitors;
 @dynamic year;
+@dynamic users;
 
 @end

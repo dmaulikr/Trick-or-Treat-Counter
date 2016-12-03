@@ -1,5 +1,5 @@
 //
-//  Year+CoreDataClass.h
+//  User+CoreDataClass.h
 //  Trick or Treat Counter
 //
 //  Created by Christopher Weaver on 12/3/16.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class User;
+@class NSObject, Year;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Year : NSManagedObject
+@interface User : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Year+CoreDataProperties.h"
+#import "User+CoreDataProperties.h"

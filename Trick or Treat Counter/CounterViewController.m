@@ -169,11 +169,9 @@
     
     [super viewDidLoad];
     
-    
-
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [self matchingRecordsToICloud];
+  //  [self matchingRecordsToICloud];
     
     _managedObjectContext = _appDelegate.persistentContainer.viewContext;
     
@@ -196,7 +194,7 @@
         
         [_appDelegate saveContext];
         
-        [[NSUserDefaults standardUserDefaults] setObject:newYear forKey:@"manipulatedYear"];
+        [[NSUserDefaults standardUserDefaults] setObject:stringFromDate forKey:@"manipulatedYear"];
         
         [_loggedYears addObject:newYear];
         
@@ -264,12 +262,8 @@
     
     CKRecord *newRecord = _appDelegate.theRecord;
     
-    
-    
-    
     [publicDB fetchRecordWithID:_appDelegate.theRecord.recordID completionHandler:^(CKRecord *fetchedPlace, NSError *error) {
-        
-        
+                
         if (fetchedPlace != nil) {
             NSString *name = fetchedPlace[@"name"];
             fetchedPlace[@"name"] = [name stringByAppendingString:@" Door A"];
