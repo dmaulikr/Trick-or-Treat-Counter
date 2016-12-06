@@ -75,9 +75,8 @@
                  
                  dispatch_async(dispatch_get_main_queue(), ^{
                      
-                     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-                    
-                     _appDelegate.theRecord = [results objectAtIndex:0];
+                     self.appDelegate.username = self.usernameTextField.text;
+                     
                      
                      UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
                      
@@ -112,13 +111,15 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:true];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if([defaults objectForKey:@"username"] != nil) {
+        
+        self.appDelegate.username = [defaults objectForKey:@"username"];
         
         UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
         
@@ -153,6 +154,10 @@
         
         [newUser setValue:self.usernameTextField.text forKey:@"username"];
         [newUser setValue: record forKey:@"ckRecord"];
+        [newUser setValue:[record objectForKey:@"streetAddress"] forKey:@"streetAddress"];
+        [newUser setValue:[record objectForKey:@"city"] forKey:@"city"];
+        [newUser setValue:[record objectForKey:@"state"] forKey:@"state"];
+        [newUser setValue:[record objectForKey:@"zipcode"] forKey:@"zipcode"];
         
         [_appDelegate saveContext];
 

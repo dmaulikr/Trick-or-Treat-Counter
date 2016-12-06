@@ -2,12 +2,12 @@
 //  Year+CoreDataClass.m
 //  Trick or Treat Counter
 //
-//  Created by Christopher Weaver on 12/3/16.
+//  Created by Christopher Weaver on 12/6/16.
 //  Copyright © 2016 Christopher Weaver. All rights reserved.
 //
 
 #import "Year+CoreDataClass.h"
-#import "User+CoreDataClass.h"
+#import "User.h"
 @implementation Year
 
 @end

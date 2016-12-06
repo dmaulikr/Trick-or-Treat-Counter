@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import <Cloudkit/Cloudkit.h>
+#import <CoreLocation/CLGeocoder.h>
+#import <CoreLocation/CLPlacemark.h>
 
 
 @interface CounterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>

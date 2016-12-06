@@ -17,7 +17,9 @@
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
-@property (readwrite, strong) CKRecord *theRecord;
+
+
+@property (readwrite, nonatomic) NSString *username;
 
 - (void)saveContext;
 

@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  Trick or Treat Counter
 //
-//  Created by Christopher Weaver on 12/3/16.
+//  Created by Christopher Weaver on 12/6/16.
 //  Copyright © 2016 Christopher Weaver. All rights reserved.
 //
 
@@ -14,8 +14,12 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"User"];
 }
 
-@dynamic username;
 @dynamic ckRecord;
+@dynamic username;
+@dynamic streetAddress;
+@dynamic city;
+@dynamic state;
+@dynamic zipcode;
 @dynamic years;
 
 @end

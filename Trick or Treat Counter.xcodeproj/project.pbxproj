@@ -20,10 +20,10 @@
 		2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36601DF0D972004DB1E7 /* LoginVC.m */; };
 		2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */; };
 		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
-		2EA4C4AD1DF338A400FF44E0 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA4C4A61DF338A400FF44E0 /* User+CoreDataClass.m */; };
-		2EA4C4AE1DF338A400FF44E0 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA4C4A81DF338A400FF44E0 /* User+CoreDataProperties.m */; };
-		2EA4C4AF1DF338A400FF44E0 /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA4C4AA1DF338A400FF44E0 /* Year+CoreDataClass.m */; };
-		2EA4C4B01DF338A400FF44E0 /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA4C4AC1DF338A400FF44E0 /* Year+CoreDataProperties.m */; };
+		2EC32D021DF76C1E00DC0AE2 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32CFB1DF76C1E00DC0AE2 /* User+CoreDataClass.m */; };
+		2EC32D031DF76C1E00DC0AE2 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32CFD1DF76C1E00DC0AE2 /* User+CoreDataProperties.m */; };
+		2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32CFF1DF76C1E00DC0AE2 /* Year+CoreDataClass.m */; };
+		2EC32D051DF76C1E00DC0AE2 /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32D011DF76C1E00DC0AE2 /* Year+CoreDataProperties.m */; };
 		2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -84,14 +84,15 @@
 		2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		2EA4C4A51DF338A400FF44E0 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "../User+CoreDataClass.h"; sourceTree = "<group>"; };
-		2EA4C4A61DF338A400FF44E0 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "../User+CoreDataClass.m"; sourceTree = "<group>"; };
-		2EA4C4A71DF338A400FF44E0 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "../User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2EA4C4A81DF338A400FF44E0 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "../User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2EA4C4A91DF338A400FF44E0 /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataClass.h"; path = "../Year+CoreDataClass.h"; sourceTree = "<group>"; };
-		2EA4C4AA1DF338A400FF44E0 /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataClass.m"; path = "../Year+CoreDataClass.m"; sourceTree = "<group>"; };
-		2EA4C4AB1DF338A400FF44E0 /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataProperties.h"; path = "../Year+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2EA4C4AC1DF338A400FF44E0 /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataProperties.m"; path = "../Year+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2EC32CF91DF76BAB00DC0AE2 /* DataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		2EC32CFA1DF76C1E00DC0AE2 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "../User+CoreDataClass.h"; sourceTree = "<group>"; };
+		2EC32CFB1DF76C1E00DC0AE2 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "../User+CoreDataClass.m"; sourceTree = "<group>"; };
+		2EC32CFC1DF76C1E00DC0AE2 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "../User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2EC32CFD1DF76C1E00DC0AE2 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "../User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2EC32CFE1DF76C1E00DC0AE2 /* Year+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataClass.h"; path = "../Year+CoreDataClass.h"; sourceTree = "<group>"; };
+		2EC32CFF1DF76C1E00DC0AE2 /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataClass.m"; path = "../Year+CoreDataClass.m"; sourceTree = "<group>"; };
+		2EC32D001DF76C1E00DC0AE2 /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataProperties.h"; path = "../Year+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2EC32D011DF76C1E00DC0AE2 /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataProperties.m"; path = "../Year+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearsTableViewController.h; sourceTree = "<group>"; };
 		2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,15 +231,15 @@
 		2E900B6E1DE63DA4003F15DA /* CoreDataFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2EC32CFA1DF76C1E00DC0AE2 /* User+CoreDataClass.h */,
+				2EC32CFB1DF76C1E00DC0AE2 /* User+CoreDataClass.m */,
+				2EC32CFC1DF76C1E00DC0AE2 /* User+CoreDataProperties.h */,
+				2EC32CFD1DF76C1E00DC0AE2 /* User+CoreDataProperties.m */,
+				2EC32CFE1DF76C1E00DC0AE2 /* Year+CoreDataClass.h */,
+				2EC32CFF1DF76C1E00DC0AE2 /* Year+CoreDataClass.m */,
+				2EC32D001DF76C1E00DC0AE2 /* Year+CoreDataProperties.h */,
+				2EC32D011DF76C1E00DC0AE2 /* Year+CoreDataProperties.m */,
 				2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */,
-				2EA4C4A51DF338A400FF44E0 /* User+CoreDataClass.h */,
-				2EA4C4A61DF338A400FF44E0 /* User+CoreDataClass.m */,
-				2EA4C4A71DF338A400FF44E0 /* User+CoreDataProperties.h */,
-				2EA4C4A81DF338A400FF44E0 /* User+CoreDataProperties.m */,
-				2EA4C4A91DF338A400FF44E0 /* Year+CoreDataClass.h */,
-				2EA4C4AA1DF338A400FF44E0 /* Year+CoreDataClass.m */,
-				2EA4C4AB1DF338A400FF44E0 /* Year+CoreDataProperties.h */,
-				2EA4C4AC1DF338A400FF44E0 /* Year+CoreDataProperties.m */,
 			);
 			name = CoreDataFiles;
 			sourceTree = "<group>";
@@ -389,16 +390,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA4C4B01DF338A400FF44E0 /* Year+CoreDataProperties.m in Sources */,
-				2EA4C4AE1DF338A400FF44E0 /* User+CoreDataProperties.m in Sources */,
+				2EC32D051DF76C1E00DC0AE2 /* Year+CoreDataProperties.m in Sources */,
+				2EC32D031DF76C1E00DC0AE2 /* User+CoreDataProperties.m in Sources */,
 				2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */,
 				2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */,
 				2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
 				2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */,
 				2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */,
-				2EA4C4AF1DF338A400FF44E0 /* Year+CoreDataClass.m in Sources */,
-				2EA4C4AD1DF338A400FF44E0 /* User+CoreDataClass.m in Sources */,
+				2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */,
+				2EC32D021DF76C1E00DC0AE2 /* User+CoreDataClass.m in Sources */,
 				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,
 				2E426E631DE36DB80091B35F /* main.m in Sources */,
 			);
@@ -675,10 +676,11 @@
 		2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2EC32CF91DF76BAB00DC0AE2 /* DataModel 3.xcdatamodel */,
 				2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */,
 				2E900B661DE63CF6003F15DA /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 2E8133831DEE18020015E0F7 /* DataModel 2.xcdatamodel */;
+			currentVersion = 2EC32CF91DF76BAB00DC0AE2 /* DataModel 3.xcdatamodel */;
 			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
