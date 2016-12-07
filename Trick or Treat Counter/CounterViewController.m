@@ -30,6 +30,7 @@
 @property (nonatomic) Year *manipulatedYear;
 @property (nonatomic) User *currentUser;
 @property (nonatomic) CloudkitDataFunctions* cloudkitObject;
+@property (nonatomic) CoreDataFunctions* coredataObject;
 
 @end
 
@@ -52,7 +53,7 @@
         
         CoreDataFunctions* createNewYear = [[CoreDataFunctions alloc] init];
         
-       Year* newYear = [createNewYear newYear:_loggedYears forUser:_currentUser :_managedObjectContext];
+       Year* newYear = [createNewYear newYear:_loggedYears forUser:_currentUser];
         
         [_appDelegate saveContext];
         
@@ -106,6 +107,7 @@
         self.counterLabel.text = [NSString stringWithFormat:@"%d",self.counter];
         
         [_manipulatedYear setValue: @(_counter) forKey:@"visitors"];
+        
         [_appDelegate saveContext];
         
     });
@@ -175,9 +177,9 @@
     
     _managedObjectContext = _appDelegate.persistentContainer.viewContext;
     
-    CoreDataFunctions* coredataObject = [[CoreDataFunctions alloc] init];
+    _coredataObject = [[CoreDataFunctions alloc] init];
     
-    _currentUser = [coredataObject performFetch];
+    _currentUser = [_coredataObject performFetch];
     
     NSSet *years = [_currentUser valueForKey:@"years"];
     
@@ -189,7 +191,7 @@
     
     if (_loggedYears.count == 0) {
         
-        Year* newYear = [coredataObject newYear:_loggedYears forUser:_currentUser :_managedObjectContext];
+        Year* newYear = [_coredataObject newYear:_loggedYears forUser:_currentUser];
         
         [_loggedYears addObject: newYear];
         
@@ -204,6 +206,11 @@
             _manipulatedYear = i;
                 
             break;
+            
+        } else {
+            
+            _manipulatedYear = [_loggedYears objectAtIndex:0];
+            
         }
     }
     
@@ -227,7 +234,6 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return _loggedYears.count;
 }
-
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     

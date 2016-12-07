@@ -58,8 +58,6 @@ CFTimeInterval timeBetweenDraw = 0.005;
 
     [plusPath stroke];
     
-    
-    
     if (_buttonPushed) {
         
         [NSTimer scheduledTimerWithTimeInterval:timeBetweenDraw
@@ -82,14 +80,6 @@ CFTimeInterval timeBetweenDraw = 0.005;
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-
 }
 
 

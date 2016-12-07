@@ -26,8 +26,9 @@
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index;
 
--(Year*)newYear:(NSMutableArray*)yearsArray forUser:(User*)currentUser : (NSManagedObjectContext*)context;
+-(Year*)newYear:(NSMutableArray*)yearsArray forUser:(User*)currentUser;
 -(void)createnewUser:(CKRecord*)userRecord userName:(NSString*)userName;
 -(User*)performFetch;
+-(void)save;
 
 @end

@@ -24,6 +24,11 @@
     return self;
 }
 
+-(void)save{
+    
+    [_appDelegate saveContext];
+}
+
 -(User*)performFetch {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -39,7 +44,6 @@
 
 
 -(void)createnewUser:(CKRecord*)userRecord userName:(NSString*)userName {
-    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"User"];
     
@@ -65,7 +69,7 @@
     }
 }
 
--(Year*)newYear:(NSMutableArray*)yearsArray forUser:(User*)currentUser : (NSManagedObjectContext*)context {
+-(Year*)newYear:(NSMutableArray*)yearsArray forUser:(User*)currentUser {
     
     NSDate *date = [NSDate date];
     
@@ -84,18 +88,21 @@
         stringFromDate = [NSString stringWithFormat:@"%hd", nextyearInteger];
     }
     
-    
-    Year *newYear = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:context];
+    Year *newYear = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:_appDelegate.persistentContainer.viewContext];
     
     [newYear setValue:stringFromDate forKey:@"year"];
     [newYear setValue: [NSString stringWithFormat:@"%@,%@,%@,%@", currentUser.streetAddress, currentUser.city, currentUser.state, currentUser.zipcode] forKey:@"address"];
+    [newYear setValue:currentUser forKey:@"users"];
     
+    NSMutableSet *newYearSet = [currentUser valueForKey:@"years"];
     
-    NSSet *newYearSet = [NSSet setWithObjects:newYear, nil];
+    [newYearSet addObject:newYear];
     
     [currentUser setValue:newYearSet forKey:@"years"];
     
     [[NSUserDefaults standardUserDefaults] setObject:stringFromDate forKey:@"manipulatedYear"];
+    
+    [_appDelegate saveContext];
     
     
     return newYear;

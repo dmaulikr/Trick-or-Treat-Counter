@@ -8,6 +8,12 @@
 
 #import "YearsTableViewController.h"
 
+@interface YearsTableViewController ()
+
+@property (nonatomic) NSMutableArray *years;
+
+@end
+
 @implementation YearsTableViewController
 
 
@@ -19,7 +25,20 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 1;
+    CoreDataFunctions* coredataObject = [[CoreDataFunctions alloc] init];
+    User *currentUser = [coredataObject performFetch];
+    
+    NSSet *yearsSet = [currentUser valueForKey:@"years"];
+    
+    _years = [[NSMutableArray alloc] init];
+    
+    for (Year *i in yearsSet) {
+        
+        [_years addObject:i];
+        
+    }
+    
+    return _years.count;
 }
 
 -(UITableView *)tableView: (UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -27,6 +46,15 @@
     NSString *simpleIdentifier = @"simpleIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: simpleIdentifier];
+    
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:simpleIdentifier];
+    }
+
+    Year *singleYear = _years[indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@,   The Number of Visitors: %hd", singleYear.year, singleYear.visitors];
+    
     
     return cell;
 }

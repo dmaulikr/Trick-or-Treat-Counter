@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "CoreDataFunctions.h"
+#import "Year+CoreDataClass.h"
+#import "Year+CoreDataProperties.h"
+#import "User+CoreDataClass.h"
+#import "User+CoreDataProperties.h"
 
 @interface YearsTableViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
