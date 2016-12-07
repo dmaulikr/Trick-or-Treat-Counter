@@ -22,7 +22,6 @@
 @property (nonatomic) UIVisualEffectView *blurEffectView;
 @property (nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) IBOutlet UIButton *yearButton;
-@property (nonatomic) CKDatabase *publicDB;
 
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic) NSFetchRequest *fetchRequest;
@@ -30,7 +29,7 @@
 @property (nonatomic) NSMutableArray *loggedYears;
 @property (nonatomic) Year *manipulatedYear;
 @property (nonatomic) User *currentUser;
-@property (nonatomic) CKRecord* mapYears;
+@property (nonatomic) CloudkitDataFunctions* cloudkitObject;
 
 @end
 
@@ -51,28 +50,13 @@
     
     if ([date compare: halloweenDate] == NSOrderedDescending) {
         
-        [formatter setDateFormat:@"YYYY"];
+        CoreDataFunctions* createNewYear = [[CoreDataFunctions alloc] init];
         
-        NSString *currentYearString = [formatter stringFromDate: date];
-        
-        int nextyearInteger = [currentYearString integerValue] + 1;
-        
-        NSString *nextYear = [NSString stringWithFormat: @"%i", nextyearInteger];
-        
-        NSManagedObject *newYear = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:self.managedObjectContext];
-        [newYear setValue:nextYear forKey:@"year"];
-        [newYear setValue: @0 forKey:@"visitors"];
-        
-        NSMutableSet *newYearSet = [_currentUser mutableSetValueForKey:@"years"];
-        [newYearSet addObject:newYear];
-        
-        [_currentUser setValue:newYearSet forKey:@"years"];
+       Year* newYear = [createNewYear newYear:_loggedYears forUser:_currentUser :_managedObjectContext];
         
         [_appDelegate saveContext];
         
         [_loggedYears addObject:newYear];
-        
-        
         
     }
     
@@ -124,10 +108,6 @@
         [_manipulatedYear setValue: @(_counter) forKey:@"visitors"];
         [_appDelegate saveContext];
         
-        
-
-        
-        
     });
     
     sender.currentAngle = 1;
@@ -169,13 +149,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     
-    [_mapYears setObject: @(_counter) forKey:@"visitors"];
-    
-    [_publicDB saveRecord: _mapYears completionHandler:^(CKRecord *savedPlace, NSError *error) {
-        
-        
-        
-    }];
+    [_cloudkitObject savemapViewRecords:_manipulatedYear];
     
 }
 
@@ -199,21 +173,11 @@
     
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-  //  [self matchingRecordsToICloud];
-    
-    
     _managedObjectContext = _appDelegate.persistentContainer.viewContext;
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username = %@", [defaults objectForKey:@"username"]];
+    CoreDataFunctions* coredataObject = [[CoreDataFunctions alloc] init];
     
-    _fetchRequest.predicate = predicate;
-    _fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"User"];
-    
-    NSArray *userArray = [[self.managedObjectContext executeFetchRequest: self.fetchRequest error:nil] mutableCopy];
-    
-    _currentUser = [userArray objectAtIndex:0];
+    _currentUser = [coredataObject performFetch];
     
     NSSet *years = [_currentUser valueForKey:@"years"];
     
@@ -225,28 +189,11 @@
     
     if (_loggedYears.count == 0) {
         
-        NSDate *date = [NSDate date];
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"YYYY"];
-        NSString *stringFromDate = [formatter stringFromDate:date];
-        
-        NSManagedObject *newYear = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:self.managedObjectContext];
-        
-        [newYear setValue:stringFromDate forKey:@"year"];
-        [newYear setValue: [NSString stringWithFormat:@"%@,%@,%@,%@", @"605 N Bridge St", @"Yorkville", @"Il", @"60560"] forKey:@"address"];
-        
-        
-        NSSet *newYearSet = [NSSet setWithObjects:newYear, nil];
-        
-        [_currentUser setValue:newYearSet forKey:@"years"];
-        
-        [_appDelegate saveContext];
-        
-        [[NSUserDefaults standardUserDefaults] setObject:stringFromDate forKey:@"manipulatedYear"];
+        Year* newYear = [coredataObject newYear:_loggedYears forUser:_currentUser :_managedObjectContext];
         
         [_loggedYears addObject: newYear];
         
+        [_appDelegate saveContext];
     }
         
     for (Year *i in _loggedYears) {
@@ -267,7 +214,9 @@
     
     self.counter = _manipulatedYear.visitors;
     
-    [self manageMapViewRecords: _manipulatedYear.year];
+    _cloudkitObject = [[CloudkitDataFunctions alloc] init];
+    
+    [_cloudkitObject manageMapViewRecords:_manipulatedYear];
     
 }
 
@@ -292,7 +241,7 @@
     
     self.counter = _manipulatedYear.visitors;
     
-    [self manageMapViewRecords: _manipulatedYear.year];
+    [_cloudkitObject manageMapViewRecords:_manipulatedYear];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
@@ -309,82 +258,6 @@
     return label;
 }
 
--(void)manageMapViewRecords:(NSString*)year {
-    
-    
-    
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    
-    [geocoder geocodeAddressString: _manipulatedYear.address completionHandler:^(NSArray *placemarks, NSError *error) {
-        
-        CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
-        
-        CLLocation *myLocation = [[CLLocation alloc] initWithLatitude: myPlacemark.location.coordinate.latitude longitude:myPlacemark.location.coordinate.longitude];
-        
-        
-        _publicDB = [[CKContainer defaultContainer] publicCloudDatabase];
-        
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"year = %@", year];
-        
-        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"location = %@", myLocation];
-        
-        
-        NSPredicate *andPredicate = [NSCompoundPredicate andPredicateWithSubpredicates: @[predicate, predicate2]];
-        
-        CKQuery *query = [[CKQuery alloc] initWithRecordType:@"mapLocations" predicate:andPredicate];
-        
-        [_publicDB performQuery:query
-                   inZoneWithID:nil
-              completionHandler:^(NSArray *results, NSError *error) {
-                  
-                  if (results.count != 0) {
-                      
-                      _mapYears = [results objectAtIndex:0];
-                      
-                      
-                  } else {
-                      
-                      CKRecordID *mapUser = [[CKRecordID alloc] initWithRecordName:@"MapUser"];
-                      
-                      CKRecord *mapLocations = [[CKRecord alloc] initWithRecordType:@"mapLocations" recordID:mapUser];
-                      
-                      mapLocations[@"location"] = myLocation;
-                      mapLocations[@"visitors"] = @1;
-                      mapLocations[@"year"] = year;
-                      
-                      
-                      [_publicDB saveRecord:mapLocations completionHandler:^(CKRecord *savedPlace, NSError *error) {
-                          
-                          
-                      }];
-
-                  }
-                  
-              }];
-        
-    }];
-    
-    
-}
-
--(void)matchingRecordsToICloud {
-    
-    _publicDB = [[CKContainer defaultContainer] publicCloudDatabase];
-    
-    [_publicDB fetchRecordWithID:_currentUser.ckRecord completionHandler:^(CKRecord *fetchedPlace, NSError *error) {
-                
-        if (fetchedPlace != nil) {
-            
-            [_publicDB saveRecord:fetchedPlace completionHandler:^(CKRecord *savedPlace, NSError *savedError) {
-                
-            }];
-        } else {
-            // handle errors here
-        }
-    }];
-    
-    
-}
 
 
 @end

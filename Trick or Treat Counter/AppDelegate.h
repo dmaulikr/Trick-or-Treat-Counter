@@ -18,9 +18,6 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 
-
-@property (readwrite, nonatomic) NSString *username;
-
 - (void)saveContext;
 
 

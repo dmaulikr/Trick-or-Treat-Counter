@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) IBOutlet UIButton *stayLoggedInButton;
 @property (nonatomic) BOOL *stayLoggedInButtonOn;
 
@@ -46,47 +45,36 @@
 - (IBAction)loginButtonPushed:(id)sender {
     
     if ([self.usernameTextField hasText] && [self.passwordTextField hasText]) {
+        
+        CloudkitDataFunctions *cloudkitObject = [[CloudkitDataFunctions alloc] init];
+        
+        [cloudkitObject login:self.usernameTextField.text password:self.passwordTextField.text completion: ^(CKRecord* results) {
+            
+            if (results != nil) {
+                
+                if (self.stayLoggedInButtonOn == true) {
+                    
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    
+                    [defaults setObject:self.usernameTextField.text forKey:@"username"];
+                    
+                }
+                
+                CoreDataFunctions *coreDataObject = [[CoreDataFunctions alloc] init];
+                
+                [coreDataObject createnewUser:results userName:self.usernameTextField.text];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
+                    
+                    [self presentViewController: tabBarController animated:YES completion:nil];
+                    
+                });
+            }
+            
+        }];
     
-    CKDatabase *publicDB = [[CKContainer defaultContainer] publicCloudDatabase];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userName = %@", self.usernameTextField.text];
-    
-    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"password = %@", self.passwordTextField.text];
-    
-    NSPredicate *andPredicate = [NSCompoundPredicate andPredicateWithSubpredicates: @[predicate, predicate2]];
-    
-    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"newUser" predicate:andPredicate];
-    
-    [publicDB performQuery:query
-              inZoneWithID:nil
-         completionHandler:^(NSArray *results, NSError *error) {
-             
-             if (results.count == 1) {
-                 
-                 if (self.stayLoggedInButtonOn == true) {
-                     
-                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-                     [defaults setObject:self.usernameTextField.text forKey:@"username"];
-                     
-                 }
-                 
-                 [self handlePersistence:[results objectAtIndex:0]];
-                 
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     
-                     self.appDelegate.username = self.usernameTextField.text;
-                     
-                     
-                     UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
-                     
-                     [self presentViewController: tabBarController animated:YES completion:nil];
-                     
-                     
-                 });
-             }
-
-         }];
     }
     
 }
@@ -119,7 +107,6 @@
     
     if([defaults objectForKey:@"username"] != nil) {
         
-        self.appDelegate.username = [defaults objectForKey:@"username"];
         
         UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
         
@@ -134,40 +121,6 @@
     
 }
 
--(void)handlePersistence:(CKRecord*)record{
-    
-    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    NSManagedObjectContext *managedObjectContext = _appDelegate.persistentContainer.viewContext;
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"User"];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username = %@", self.usernameTextField.text];
-    
-    fetchRequest.predicate = predicate;
-    
-    NSArray *userArray = [[managedObjectContext executeFetchRequest: fetchRequest error:nil] mutableCopy];
-    
-    if (userArray.count == 0) {
-        
-        NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
-        
-        [newUser setValue:self.usernameTextField.text forKey:@"username"];
-        [newUser setValue: record forKey:@"ckRecord"];
-        [newUser setValue:[record objectForKey:@"streetAddress"] forKey:@"streetAddress"];
-        [newUser setValue:[record objectForKey:@"city"] forKey:@"city"];
-        [newUser setValue:[record objectForKey:@"state"] forKey:@"state"];
-        [newUser setValue:[record objectForKey:@"zipcode"] forKey:@"zipcode"];
-        
-        [_appDelegate saveContext];
-
-    } else {
-        
-        
-        
-    }
-    
-}
 
 
 

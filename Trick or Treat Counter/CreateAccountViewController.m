@@ -31,39 +31,14 @@
     
     if ([self fieldsAreFilled]) {
         
+        CloudkitDataFunctions* cloudkitObject = [[CloudkitDataFunctions alloc] init];
+        
+        [cloudkitObject createNewUser:self.firstNameTextField.text lastName:self.lastNameTextField.text userName:self.usernameTextField.text password:self.passwordTextField.text streetAddress:self.streetAddressTextField.text city:self.cityTextField.text zipcode:self.zipCodeTextField.text];
+        
     } else {
         
         self.errorTextField.text = @"One or more requried fields was left empty";
     }
-    
-    CKDatabase *publicDB = [[CKContainer defaultContainer] publicCloudDatabase];
-    
-    CKRecordID *user = [[CKRecordID alloc] initWithRecordName:@"User"];
-    
-    CKRecord *newUser = [[CKRecord alloc] initWithRecordType:@"newUser" recordID:user];
-    
-    newUser[@"firstName"] = [NSString stringWithFormat:@"%@", self.firstNameTextField.text];
-    
-    newUser[@"lastName"] = [NSString stringWithFormat:@"%@", self.lastNameTextField.text];
-    
-    newUser[@"userName"] = [NSString stringWithFormat:@"%@", self.usernameTextField.text];
-    
-    newUser[@"password"] = [NSString stringWithFormat:@"%@", self.passwordTextField.text];
-    
-    newUser[@"streetAddress"] = [NSString stringWithFormat:@"%@", self.streetAddressTextField.text];
-    
-    newUser[@"city"] = [NSString stringWithFormat:@"%@", self.cityTextField.text];
-    
-    newUser[@"zipcode"] = [NSString stringWithFormat:@"%@", self.zipCodeTextField.text];
-    
-    newUser[@"years"] = @0;
-    
-    [publicDB saveRecord:newUser completionHandler:^(CKRecord *savedPlace, NSError *error) {
-        
-        
-        
-    }];
-
     
 }
 

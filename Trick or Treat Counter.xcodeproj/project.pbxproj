@@ -17,6 +17,8 @@
 		2E426E7F1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E7E1DE36DB80091B35F /* Trick_or_Treat_CounterTests.m */; };
 		2E426E8A1DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E891DE36DB80091B35F /* Trick_or_Treat_CounterUITests.m */; };
 		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
+		2E44916A1DF8659E0097273E /* CoreDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4491691DF8659E0097273E /* CoreDataFunctions.m */; };
+		2E44916D1DF871370097273E /* CloudkitDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44916C1DF871370097273E /* CloudkitDataFunctions.m */; };
 		2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36601DF0D972004DB1E7 /* LoginVC.m */; };
 		2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */; };
 		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
@@ -78,6 +80,10 @@
 		2E426E8B1DE36DB80091B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E426E9D1DE36FB60091B35F /* CounterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterButton.h; sourceTree = "<group>"; };
 		2E426E9E1DE36FB60091B35F /* CounterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterButton.m; sourceTree = "<group>"; };
+		2E4491681DF8659E0097273E /* CoreDataFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataFunctions.h; sourceTree = "<group>"; };
+		2E4491691DF8659E0097273E /* CoreDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataFunctions.m; sourceTree = "<group>"; };
+		2E44916B1DF871370097273E /* CloudkitDataFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudkitDataFunctions.h; sourceTree = "<group>"; };
+		2E44916C1DF871370097273E /* CloudkitDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudkitDataFunctions.m; sourceTree = "<group>"; };
 		2E7D365F1DF0D972004DB1E7 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		2E7D36601DF0D972004DB1E7 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		2E7D36621DF0DD7A004DB1E7 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 		2E426E991DE36DF10091B35F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2E44916B1DF871370097273E /* CloudkitDataFunctions.h */,
+				2E44916C1DF871370097273E /* CloudkitDataFunctions.m */,
+				2E4491681DF8659E0097273E /* CoreDataFunctions.h */,
+				2E4491691DF8659E0097273E /* CoreDataFunctions.m */,
 				2E900B6E1DE63DA4003F15DA /* CoreDataFiles */,
 			);
 			name = Model;
@@ -392,12 +402,14 @@
 			files = (
 				2EC32D051DF76C1E00DC0AE2 /* Year+CoreDataProperties.m in Sources */,
 				2EC32D031DF76C1E00DC0AE2 /* User+CoreDataProperties.m in Sources */,
+				2E44916D1DF871370097273E /* CloudkitDataFunctions.m in Sources */,
 				2E426E691DE36DB80091B35F /* CounterViewController.m in Sources */,
 				2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */,
 				2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */,
 				2E426E661DE36DB80091B35F /* AppDelegate.m in Sources */,
 				2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */,
 				2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */,
+				2E44916A1DF8659E0097273E /* CoreDataFunctions.m in Sources */,
 				2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */,
 				2EC32D021DF76C1E00DC0AE2 /* User+CoreDataClass.m in Sources */,
 				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,

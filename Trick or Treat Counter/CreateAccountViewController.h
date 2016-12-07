@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Cloudkit/Cloudkit.h"
+#import "CloudkitDataFunctions.h"
 
 @interface CreateAccountViewController : UIViewController <UITextFieldDelegate>
 

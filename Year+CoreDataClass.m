@@ -7,7 +7,7 @@
 //
 
 #import "Year+CoreDataClass.h"
-#import "User.h"
+#import "User+CoreDataClass.h"
 @implementation Year
 
 @end
