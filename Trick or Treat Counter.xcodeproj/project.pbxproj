@@ -26,6 +26,7 @@
 		2EC32D031DF76C1E00DC0AE2 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32CFD1DF76C1E00DC0AE2 /* User+CoreDataProperties.m */; };
 		2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32CFF1DF76C1E00DC0AE2 /* Year+CoreDataClass.m */; };
 		2EC32D051DF76C1E00DC0AE2 /* Year+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC32D011DF76C1E00DC0AE2 /* Year+CoreDataProperties.m */; };
+		2ECA9E901DF9D8EC002000FC /* LineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA9E8F1DF9D8EC002000FC /* LineGraphView.m */; };
 		2ED1D4EC1DE4AA0500EEB9EC /* YearsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		2EC32CFF1DF76C1E00DC0AE2 /* Year+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataClass.m"; path = "../Year+CoreDataClass.m"; sourceTree = "<group>"; };
 		2EC32D001DF76C1E00DC0AE2 /* Year+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Year+CoreDataProperties.h"; path = "../Year+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2EC32D011DF76C1E00DC0AE2 /* Year+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Year+CoreDataProperties.m"; path = "../Year+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2ECA9E8E1DF9D8EC002000FC /* LineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphView.h; sourceTree = "<group>"; };
+		2ECA9E8F1DF9D8EC002000FC /* LineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphView.m; sourceTree = "<group>"; };
 		2ED1D4EA1DE4AA0500EEB9EC /* YearsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearsTableViewController.h; sourceTree = "<group>"; };
 		2ED1D4EB1DE4AA0500EEB9EC /* YearsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,8 @@
 			children = (
 				2E426E9D1DE36FB60091B35F /* CounterButton.h */,
 				2E426E9E1DE36FB60091B35F /* CounterButton.m */,
+				2ECA9E8E1DF9D8EC002000FC /* LineGraphView.h */,
+				2ECA9E8F1DF9D8EC002000FC /* LineGraphView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */,
 				2EC32D021DF76C1E00DC0AE2 /* User+CoreDataClass.m in Sources */,
 				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,
+				2ECA9E901DF9D8EC002000FC /* LineGraphView.m in Sources */,
 				2E426E631DE36DB80091B35F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
