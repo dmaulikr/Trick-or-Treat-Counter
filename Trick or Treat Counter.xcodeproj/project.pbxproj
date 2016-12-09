@@ -19,6 +19,7 @@
 		2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426E9E1DE36FB60091B35F /* CounterButton.m */; };
 		2E44916A1DF8659E0097273E /* CoreDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4491691DF8659E0097273E /* CoreDataFunctions.m */; };
 		2E44916D1DF871370097273E /* CloudkitDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44916C1DF871370097273E /* CloudkitDataFunctions.m */; };
+		2E56F27B1DFB20950084F2CF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E56F27A1DFB20950084F2CF /* MapViewController.m */; };
 		2E7D36611DF0D972004DB1E7 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36601DF0D972004DB1E7 /* LoginVC.m */; };
 		2E7D36641DF0DD7A004DB1E7 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */; };
 		2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E900B651DE63CF6003F15DA /* DataModel.xcdatamodeld */; };
@@ -85,6 +86,8 @@
 		2E4491691DF8659E0097273E /* CoreDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataFunctions.m; sourceTree = "<group>"; };
 		2E44916B1DF871370097273E /* CloudkitDataFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudkitDataFunctions.h; sourceTree = "<group>"; };
 		2E44916C1DF871370097273E /* CloudkitDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudkitDataFunctions.m; sourceTree = "<group>"; };
+		2E56F2791DFB20950084F2CF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2E56F27A1DFB20950084F2CF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2E7D365F1DF0D972004DB1E7 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		2E7D36601DF0D972004DB1E7 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		2E7D36621DF0DD7A004DB1E7 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				2E7D36601DF0D972004DB1E7 /* LoginVC.m */,
 				2E7D36621DF0DD7A004DB1E7 /* CreateAccountViewController.h */,
 				2E7D36631DF0DD7A004DB1E7 /* CreateAccountViewController.m */,
+				2E56F2791DFB20950084F2CF /* MapViewController.h */,
+				2E56F27A1DFB20950084F2CF /* MapViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				2E900B671DE63CF6003F15DA /* DataModel.xcdatamodeld in Sources */,
 				2E44916A1DF8659E0097273E /* CoreDataFunctions.m in Sources */,
 				2EC32D041DF76C1E00DC0AE2 /* Year+CoreDataClass.m in Sources */,
+				2E56F27B1DFB20950084F2CF /* MapViewController.m in Sources */,
 				2EC32D021DF76C1E00DC0AE2 /* User+CoreDataClass.m in Sources */,
 				2E426E9F1DE36FB60091B35F /* CounterButton.m in Sources */,
 				2ECA9E901DF9D8EC002000FC /* LineGraphView.m in Sources */,

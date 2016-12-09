@@ -55,7 +55,6 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@,   The Number of Visitors: %hd", singleYear.year, singleYear.visitors];
     
-    
     return cell;
 }
 

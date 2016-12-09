@@ -55,9 +55,9 @@
         
        Year* newYear = [createNewYear newYear:_loggedYears forUser:_currentUser];
         
-        [_appDelegate saveContext];
-        
         [_loggedYears addObject:newYear];
+        
+        [_appDelegate saveContext];
         
     }
     

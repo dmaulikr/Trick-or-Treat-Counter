@@ -46,6 +46,10 @@
     
     [_mapYears setObject: @(manipulatedYear.visitors) forKey:@"visitors"];
     
+    [_mapYears setObject: manipulatedYear.year forKey: @"year"];
+    
+    [_mapYears setObject:manipulatedYear.address forKey:@"address"];
+    
     [_publicDB saveRecord: _mapYears completionHandler:^(CKRecord *savedPlace, NSError *error) {
         
         
@@ -54,7 +58,6 @@
 }
 
 -(void)createNewUser:(NSString*)firstName lastName:(NSString*)lastName userName:(NSString*)userName password:(NSString*)password streetAddress:(NSString*)streetAddress city:(NSString*)city zipcode:(NSString*)zipcode {
-    
     
     CKRecordID *user = [[CKRecordID alloc] initWithRecordName:@"User"];
     
@@ -75,11 +78,24 @@
     
     [_publicDB saveRecord:newUser completionHandler:^(CKRecord *savedPlace, NSError *error) {
         
-        
-        
     }];
 
+}
+
+-(void)returnMapViewRecords:(NSString*)year completion:(void (^)(NSArray* records))completionBlock {
     
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"year = %@", year];
+    
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"mapLocations" predicate:predicate];
+
+    [_publicDB performQuery:query
+               inZoneWithID:nil
+          completionHandler:^(NSArray *results, NSError *error) {
+              
+              completionBlock(results);
+              
+          }];
+
 }
 
 -(void)manageMapViewRecords:(Year*)manipulatedYear {

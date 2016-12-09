@@ -107,7 +107,6 @@
     
     if([defaults objectForKey:@"username"] != nil) {
         
-        
         UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
         
         [self presentViewController: tabBarController animated:YES completion:nil];
@@ -117,8 +116,6 @@
         _stayLoggedInButtonOn = false;
         
     }
-
-    
 }
 
 

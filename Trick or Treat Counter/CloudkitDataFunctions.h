@@ -24,9 +24,14 @@
 
 -(instancetype)init;
 -(CKRecord*)manageMapViewRecords:(Year*)manipulatedYear;
+
 -(void)savemapViewRecords:(Year*)manipulatedYear;
+
 -(void)createNewUser:(NSString*)firstName lastName:(NSString*)lastName userName:(NSString*)userName password:(NSString*)password streetAddress:(NSString*)streetAddress city:(NSString*)city zipcode:(NSString*)zipcode;
+
 -(void)login: (NSString*)userName password:(NSString*)password completion:(void (^)(CKRecord* record))completionBlock;
+
+-(void)returnMapViewRecords:(NSString*)year completion:(void (^)(NSArray* record))completionBlock;
                       
 
 @end
